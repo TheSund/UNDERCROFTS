@@ -58,7 +58,7 @@ public class PlayerScript : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		if (!lockMovement) 
+		if (!lockMovement && !PauseMenu.gameIsPaused) 
 		{
 			moveInput = new Vector2 (Input.GetAxisRaw ("Horizontal"), Input.GetAxisRaw ("Vertical"));
 			velocity = moveInput.normalized * speed * 50;

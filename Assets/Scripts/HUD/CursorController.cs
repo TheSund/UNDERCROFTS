@@ -7,13 +7,15 @@ public class CursorController : MonoBehaviour {
     public Texture2D cursorMenu1;
     public static Texture2D cursorBattle;
     public static Texture2D cursorMenu;
+    public float startOffsetX;
+    public float startOffsetY;
 
     // Use this for initialization
     void Start () 
 	{
         cursorBattle = cursorBattle1;
 		cursorMenu = cursorMenu1;
-    Cursor.SetCursor(cursorBattle, new Vector2(32f, 32f), CursorMode.Auto);
+    Cursor.SetCursor(cursorBattle, new Vector2(startOffsetX, startOffsetY), CursorMode.Auto);
 	}
 
 	// Update is called once per frame

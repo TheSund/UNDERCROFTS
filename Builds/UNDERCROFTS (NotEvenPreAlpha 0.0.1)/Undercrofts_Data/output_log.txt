@@ -1,0 +1,64 @@
+Mono path[0] = 'H:/Program Files/Unity/Project/The Dungeon/UNDERCROFTS/Builds/UNDERCROFTS (NotEvenPreAlpha 0.0.1)/Undercrofts_Data/Managed'
+Mono path[1] = 'H:/Program Files/Unity/Project/The Dungeon/UNDERCROFTS/Builds/UNDERCROFTS (NotEvenPreAlpha 0.0.1)/Undercrofts_Data/Mono'
+Mono config path = 'H:/Program Files/Unity/Project/The Dungeon/UNDERCROFTS/Builds/UNDERCROFTS (NotEvenPreAlpha 0.0.1)/Undercrofts_Data/Mono/etc'
+PlayerConnection initialized from H:/Program Files/Unity/Project/The Dungeon/UNDERCROFTS/Builds/UNDERCROFTS (NotEvenPreAlpha 0.0.1)/Undercrofts_Data (debug = 0)
+PlayerConnection initialized network socket : 0.0.0.0 55409
+Multi-casting "[IP] 192.168.0.106 [Port] 55409 [Flags] 2 [Guid] 720583662 [EditorId] 2076428804 [Version] 1048832 [Id] WindowsPlayer(DESKTOP-NGF2MR0) [Debug] 0" to [225.0.0.222:54997]...
+PlayerConnection already initialized - listening to [192.168.0.106:55409]
+Initialize engine version: 5.2.5f1 (ad2d0368e248)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GT 1030 (ID=0x1d01)
+    Vendor:   NVIDIA
+    VRAM:     1982 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: H:\Program Files\Unity\Project\The Dungeon\UNDERCROFTS\Builds\UNDERCROFTS (NotEvenPreAlpha 0.0.1)\Undercrofts_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading H:\Program Files\Unity\Project\The Dungeon\UNDERCROFTS\Builds\UNDERCROFTS (NotEvenPreAlpha 0.0.1)\Undercrofts_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: H:\Program Files\Unity\Project\The Dungeon\UNDERCROFTS\Builds\UNDERCROFTS (NotEvenPreAlpha 0.0.1)\Undercrofts_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading H:\Program Files\Unity\Project\The Dungeon\UNDERCROFTS\Builds\UNDERCROFTS (NotEvenPreAlpha 0.0.1)\Undercrofts_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: H:\Program Files\Unity\Project\The Dungeon\UNDERCROFTS\Builds\UNDERCROFTS (NotEvenPreAlpha 0.0.1)\Undercrofts_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading H:\Program Files\Unity\Project\The Dungeon\UNDERCROFTS\Builds\UNDERCROFTS (NotEvenPreAlpha 0.0.1)\Undercrofts_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: H:\Program Files\Unity\Project\The Dungeon\UNDERCROFTS\Builds\UNDERCROFTS (NotEvenPreAlpha 0.0.1)\Undercrofts_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading H:\Program Files\Unity\Project\The Dungeon\UNDERCROFTS\Builds\UNDERCROFTS (NotEvenPreAlpha 0.0.1)\Undercrofts_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: H:\Program Files\Unity\Project\The Dungeon\UNDERCROFTS\Builds\UNDERCROFTS (NotEvenPreAlpha 0.0.1)\Undercrofts_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.676 seconds
+<RI> Initializing input.
+<RI> Input initialized.
+desktop: 1920x1080 60Hz; virtual: 3200x1080 at 0,0
+<RI> Initialized touch support.
+Platform assembly: H:\Program Files\Unity\Project\The Dungeon\UNDERCROFTS\Builds\UNDERCROFTS (NotEvenPreAlpha 0.0.1)\Undercrofts_Data\Managed\System.dll (this message is harmless)
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 5.582600 ms
+System memory in use before: 27.9 MB.
+System memory in use after: 28.3 MB.
+
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 8206.
+Total: 1.983100 ms (FindLiveObjects: 0.259600 ms CreateObjectMapping: 0.302800 ms MarkObjects: 1.347900 ms  DeleteObjects: 0.066200 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.582400 ms
+System memory in use before: 26.8 MB.
+System memory in use after: 27.2 MB.
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 8206.
+Total: 1.994400 ms (FindLiveObjects: 0.243200 ms CreateObjectMapping: 0.255200 ms MarkObjects: 1.484000 ms  DeleteObjects: 0.010900 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 73.565201 ms
+System memory in use before: 30.5 MB.
+System memory in use after: 30.3 MB.
+
+Unloading 7240 unused Assets to reduce memory usage. Loaded Objects now: 794.
+Total: 1.835600 ms (FindLiveObjects: 0.286700 ms CreateObjectMapping: 0.255500 ms MarkObjects: 0.314900 ms  DeleteObjects: 0.977500 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.988200 ms
+System memory in use before: 27.0 MB.
+System memory in use after: 27.1 MB.
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 794.
+Total: 0.328600 ms (FindLiveObjects: 0.033700 ms CreateObjectMapping: 0.009600 ms MarkObjects: 0.279000 ms  DeleteObjects: 0.005200 ms)
+
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 376c -> priority: 1 

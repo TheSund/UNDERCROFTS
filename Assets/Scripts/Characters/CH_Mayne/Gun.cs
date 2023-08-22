@@ -38,64 +38,70 @@ public class Gun : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		Vector3 difference = Camera.main.ScreenToWorldPoint (Input.mousePosition) - transform.position;
-		float rotZ = Mathf.Atan2 (difference.y, difference.x) * Mathf.Rad2Deg;
-		transform.rotation = Quaternion.Euler (0f, 0f, rotZ + offset);
+		if (!PauseMenu.gameIsPaused)
+		{
+			Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+			float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+			transform.rotation = Quaternion.Euler(0f, 0f, rotZ + offset);
 
-		aimDirection = rotZ;
+			aimDirection = rotZ;
 
-		if (reloadTime <= 0 && !PauseMenu.gameIsPaused) {
-			if (Input.GetMouseButton (0)) 
+			if (reloadTime <= 0 && !PauseMenu.gameIsPaused)
 			{
-				if (arrowCount > 0)
-                    isShooting = true;
-                {
-					if (aimDirection >= 45 && aimDirection < 135)
+				if (Input.GetMouseButton(0))
+				{
+					if (arrowCount > 0)
 					{
-						anim.Play("attackback");
+						isShooting = true;
+						if (aimDirection >= 45 && aimDirection < 135)
+						{
+							anim.Play("attackback");
+						}
+						else if ((aimDirection >= 135 && aimDirection <= 180) || (aimDirection <= -135 && aimDirection >= -180))
+						{
+							anim.Play("attackleft");
+						}
+						else if (aimDirection >= -45 && aimDirection < 45)
+						{
+							anim.Play("attackright");
+						}
+						else if (aimDirection <= -45 && aimDirection > -135)
+						{
+							anim.Play("attackfront");
+						}
+						StartCoroutine(AnimTimer(0.2f));
+
+						ChangeAmmoCount(-1);
+
+						Instantiate(Arrow, shotPoint.position, transform.rotation);
+						characterFire.GetComponent<Rigidbody2D>().AddForce(characterFire.transform.position - shotPoint.position, ForceMode2D.Impulse);
+						reloadTime = startReloadTime;
 					}
-					else if ((aimDirection >= 135 && aimDirection <= 180) || (aimDirection <= -135 && aimDirection >= -180))
-					{
-                        anim.Play("attackleft");
-                    }
-                    else if (aimDirection >= -45 && aimDirection < 45)
-                    {
-                        anim.Play("attackright");
-                    }
-                    else if (aimDirection <= -45 && aimDirection > -135)
-                    {
-                        anim.Play("attackfront");
-                    }
-					StartCoroutine(AnimTimer(0.2f));
-
-                    ChangeAmmoCount(-1);
-
-					Instantiate (Arrow, shotPoint.position, transform.rotation);
-					characterFire.GetComponent<Rigidbody2D>().AddForce(characterFire.transform.position - shotPoint.position, ForceMode2D.Impulse);
-					reloadTime = startReloadTime;
 				}
-			}
-			tintReload.color = new Color(0, 0, 0, 0);
-		}
-		else 
-		{	
-			reloadTime -= Time.deltaTime;
-
-			if (reloadTime <= 0.01f) 
-			{
 				tintReload.color = new Color(0, 0, 0, 0);
 			}
-			else 
+			else
 			{
-				tintReload.color = new Color(237, 240, 298, 255);
-				tintReload.text = Mathf.Ceil(reloadTime).ToString();
+				reloadTime -= Time.deltaTime;
+
+				if (reloadTime <= 0.01f)
+				{
+					tintReload.color = new Color(0, 0, 0, 0);
+				}
+				else
+				{
+					tintReload.color = new Color(237, 240, 298, 255);
+					tintReload.text = Mathf.Ceil(reloadTime).ToString();
+				}
 			}
-		}
-		if (arrowCount > 0 || reloadTime > 0) {
-			tint.fillAmount = reloadTime / startReloadTime;
-		} else if (arrowCount == 0 && reloadTime <= 0) 
-		{
-			tint.fillAmount = 1;
+			if (arrowCount > 0 || reloadTime > 0)
+			{
+				tint.fillAmount = reloadTime / startReloadTime;
+			}
+			else if (arrowCount == 0 && reloadTime <= 0)
+			{
+				tint.fillAmount = 1;
+			}
 		}
 	}
 
