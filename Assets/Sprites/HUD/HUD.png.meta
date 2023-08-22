@@ -1,0 +1,133 @@
+fileFormatVersion: 2
+guid: 0cc69d364402c4547a17056cd9721e00
+timeCreated: 1670783388
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: HUD_CHARGE
+    21300002: HUD_Mayne_Pain
+    21300004: HUD_MAIN
+    21300006: HUD_HEALTH
+    21300008: HUD_HEALTH_DAMAGED
+    21300010: HUD_Mayne_Portrait
+    21300012: HUD_TINT
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 40
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: HUD_CHARGE
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 490
+        width: 15
+        height: 85
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HUD_Mayne_Pain
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 360
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HUD_MAIN
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 295
+        width: 540
+        height: 185
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HUD_HEALTH
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 235
+        width: 500
+        height: 35
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HUD_HEALTH_DAMAGED
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 175
+        width: 500
+        height: 35
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HUD_Mayne_Portrait
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 485
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HUD_TINT
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 500
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
