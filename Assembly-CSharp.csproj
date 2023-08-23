@@ -68,11 +68,17 @@
      <Compile Include="Assets\Scripts\enemies\EnemyScript.cs" />
      <Compile Include="Assets\Scripts\enemies\Slime\En_Slime.cs" />
      <Compile Include="Assets\Scripts\enemies\Slime\En_Slime_Radius.cs" />
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>H:/Program Files/Unity/Program/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>H:/Program Files/Unity/Program/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>H:/Program Files/Unity/Program/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>H:/Program Files/Unity/Program/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="Mono.Cecil">
  <HintPath>H:/Program Files/Unity/Program/Editor/Data/Managed/Mono.Cecil.dll</HintPath>
