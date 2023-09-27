@@ -1,0 +1,122 @@
+fileFormatVersion: 2
+guid: 667488a13d213564baacaf8d841d3df7
+timeCreated: 1669750095
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: en_slime_idle0
+    21300002: en_slime_idle1
+    21300004: en_slime_death1
+    21300006: en_slime_death2
+    21300008: en_slime_death3
+    21300010: en_slime_death4
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 40
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: en_slime_idle0
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 160
+        width: 60
+        height: 40
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: en_slime_idle1
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 160
+        width: 60
+        height: 40
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: en_slime_death1
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 95
+        width: 75
+        height: 45
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: en_slime_death2
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 95
+        width: 60
+        height: 45
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: en_slime_death3
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 95
+        width: 70
+        height: 50
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: en_slime_death4
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 95
+        width: 70
+        height: 45
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
