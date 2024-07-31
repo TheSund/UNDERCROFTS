@@ -19,15 +19,6 @@ public class CBArrow : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		/*RaycastHit2D hitInfo = Physics2D.Raycast (transform.position, new Vector3(1,-1), distance, solidObject);
-		if (hitInfo.collider != null && hitInfo.collider.isTrigger != true) 
-		{
-			if (hitInfo.collider.CompareTag ("Enemy")) {
-				hitInfo.collider.GetComponent<EnemyScript> ().TakeDamage (damage);
-				hitInfo.collider.GetComponent<Rigidbody2D> ().AddForce ((hitInfo.collider.transform.position - transform.position) * 10, ForceMode2D.Impulse);
-			}
-			Destroy (gameObject);
-		}*/
 		transform.Translate (new Vector2 (1, -1) * shotSpeed * Time.deltaTime);
 	}
 	

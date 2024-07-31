@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 7ac3550802c4df64bb816ae8715de7ef
-timeCreated: 1691326953
+timeCreated: 1710262160
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -29,6 +29,12 @@ TextureImporter:
     21300044: mayne_sprite_ammo
     21300046: mayne_sprite_jump0
     21300048: mayne_sprite_jump1
+    21300050: mayne_sprite_fall1
+    21300052: mayne_sprite_fall0
+    21300054: mayne_sprite_cs_left0
+    21300056: mayne_sprite_cs_left1
+    21300058: mayne_sprite_cs_right0
+    21300060: mayne_sprite_cs_right1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -109,7 +115,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 230
-        y: 570
+        y: 571
         width: 55
         height: 85
       alignment: 0
@@ -148,7 +154,7 @@ TextureImporter:
     - name: mayne_sprite_back1
       rect:
         serializedVersion: 2
-        x: 325
+        x: 324
         y: 465
         width: 45
         height: 90
@@ -322,6 +328,66 @@ TextureImporter:
         y: 155
         width: 60
         height: 85
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: mayne_sprite_fall1
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 145
+        width: 55
+        height: 86
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: mayne_sprite_fall0
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 145
+        width: 80
+        height: 86
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: mayne_sprite_cs_left0
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 460
+        width: 80
+        height: 75
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: mayne_sprite_cs_left1
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 375
+        width: 80
+        height: 75
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: mayne_sprite_cs_right0
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 460
+        width: 80
+        height: 75
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: mayne_sprite_cs_right1
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 375
+        width: 80
+        height: 75
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}

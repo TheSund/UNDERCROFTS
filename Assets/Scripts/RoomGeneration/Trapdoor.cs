@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Trapdoor : MonoBehaviour {
 
@@ -10,11 +11,13 @@ public class Trapdoor : MonoBehaviour {
 	private Rigidbody2D rb;
 	private Animator anim;
 	private int nextChapter;
+	private GameObject player;
 
 	// Use this for initialization
 	void Start () {
 		levelChange = GameObject.Find ("LevelChanger").GetComponent<LevelChanger>();
-		nextChapter = GameObject.FindGameObjectWithTag ("Layouts").GetComponent<LayoutList> ().chapterNumber;
+		nextChapter = GameObject.FindGameObjectWithTag ("Layouts").GetComponent<LayoutList> ().chapterNumber+1;
+
 	}
 	
 	// Update is called once per frame
@@ -26,28 +29,29 @@ public class Trapdoor : MonoBehaviour {
 		}
 	}
 
-	private void OnTriggerEnter2D(Collider2D col)
-	{
-		if (col.CompareTag("Player"))
-		{
-			playerScript = col.gameObject.GetComponent<PlayerScript>();
-			rb = col.gameObject.GetComponent<Rigidbody2D>();
-			anim = col.gameObject.GetComponent<Animator>();
+	public void OnInteract()
+	{	
+		GameObject player = GameObject.FindGameObjectWithTag("Player");
+
+			playerScript = player.gameObject.GetComponent<PlayerScript>();
+			rb = player.gameObject.GetComponent<Rigidbody2D>();
+			anim = player.gameObject.GetComponent<Animator>();
 
 			playerScript.lockMovement = true;
 			anim.Play("jump");
-			GameObject.Find ("Canvas/HUD_MAIN").SetActive(false);
-			foreach (Transform child in col.transform)
+			GameObject.FindGameObjectWithTag("CharacterHUD").SetActive(false);
+			foreach (Transform child in player.transform)
 				if (!child.CompareTag("PlayerSprite"))
 					Destroy(child.gameObject);
 
 			activated = true;
 			StartCoroutine(OnJumpComplete());
-		}
+		//}
 	}
 	private IEnumerator OnJumpComplete()
 	{
 		yield return new WaitForSeconds(0.8f);
 		levelChange.FadeToLevel(nextChapter);
 	}
+
 }

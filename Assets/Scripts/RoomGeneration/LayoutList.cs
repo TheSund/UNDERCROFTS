@@ -28,8 +28,10 @@ public class LayoutList : MonoBehaviour
 	public bool isBossChapter;
 	public GameObject[] AMBUSH;
 	public GameObject[] BOSS;
+    [Header("Item Rooms Layouts")]
+    public GameObject[] ITEM;
 
-	[HideInInspector] public List<GameObject> rooms;
+    [HideInInspector]public List<GameObject> rooms;
 	
 	private void Start()
 	{
@@ -39,10 +41,12 @@ public class LayoutList : MonoBehaviour
 	IEnumerator LastRoomFinder()
 	{
 		yield return new WaitForSeconds (2f);
-		AddRoom lastRoom = rooms [rooms.Count - 1].GetComponent<AddRoom>();
-		lastRoom.isLastRoom = true;
-		if (isBossChapter == true)
-			lastRoom.isBossRoom = true;
+		AddRoom lastRoom = rooms[rooms.Count - 1].GetComponent<AddRoom>();
+		AddRoom itemRoom = rooms[rooms.Count - 2].GetComponent<AddRoom>();
+        lastRoom.isLastRoom = true;
+        if(isBossChapter == true)
+            lastRoom.isBossRoom = true;
+        itemRoom.isItemRoom = true;
 		foreach (GameObject room in rooms) 
 		{
 			room.GetComponentInChildren<LayoutSpawner>().Spawn();

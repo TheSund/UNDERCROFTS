@@ -10,7 +10,7 @@ public class PickUpRadius : MonoBehaviour
 
 	void OnTriggerStay2D(Collider2D collider)
 	{
-		if (collider.CompareTag("ArrowPickup"))
+		if (collider.CompareTag("PlayerObject") && collider.GetComponent<ArrowPickup>() != null)
 		{
 			collider.GetComponent<Rigidbody2D>().AddForce((transform.position - collider.transform.position)*10);
 			collider.GetComponent<Rigidbody2D>().AddTorque(Random.Range(-1,2)*0.1f, ForceMode2D.Impulse);

@@ -7,7 +7,7 @@ using UnityEngine.Networking.NetworkSystem;
 public class PlayerScript : MonoBehaviour 
 {
 	[Header("Movement & Sprite Related")]
-	[HideInInspector] public bool lockMovement;
+	public bool lockMovement;
 	public float speed;
 	private Rigidbody2D rb;
 	private Vector2 moveInput;
@@ -17,8 +17,8 @@ public class PlayerScript : MonoBehaviour
 	private int direction;
 
 	[Header("Health & Damage Related")]
-	public float health;
-	public float maxHealth;
+	private float health;
+	private float maxHealth;
 	public float invFrames;
 	public float invFramesDeltaTime;
 	public bool isInvincible;
@@ -27,10 +27,9 @@ public class PlayerScript : MonoBehaviour
     public Image healthBarImage;
 	public Image healthBarDamagedImage;
 	private bool hbDamageTaken;
-	private float healthBarAnimate;
 	public Text healthtext;
 
-	public GameObject gameoverScreen;
+	private GameObject gameoverScreen;
 	[HideInInspector] public string lastDamagedBy;
 
     private bool animDamageTaken;
@@ -39,31 +38,44 @@ public class PlayerScript : MonoBehaviour
 	public Image portrait;
 	public Sprite portraitSprite;
 	public Sprite portraitSpritePain;
+	[Header("SpawnTime")]
+	public int spawnTime;
+
+	private CharacterManager manager;
     // Use this for initialization
     void Start () 
 	{
+		manager = GameObject.Find("CharacterManager").GetComponent<CharacterManager>();
+		gameoverScreen = GameObject.Find("Canvas").transform.FindChild("GameOverScreen").gameObject;
+		lockMovement = true;
 		rb = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();
 		direction = 2;
-		sprite = GameObject.FindGameObjectWithTag("PlayerSprite").GetComponent<SpriteRenderer> ();
-		health = maxHealth;
+		sprite = transform.GetComponentInChildren<SpriteRenderer>();
+		maxHealth = manager.currentMaxHealth;
+		health = manager.currentHealth;
 		hbDamageTaken = false;
 		animDamageTaken = false;
         isInvincible = false;
-		lockMovement = false;
-		healthBarAnimate = health;
 		healthtext.text = health + "/" + maxHealth;
+		healthBarImage.fillAmount = health / maxHealth;
+		healthBarDamagedImage.fillAmount = health / maxHealth;
+		StartCoroutine("EnableCollision");
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		if (!lockMovement && !PauseMenu.gameIsPaused) 
+		if (!lockMovement && !PauseMenu.gameIsPaused)
 		{
-			moveInput = new Vector2 (Input.GetAxisRaw ("Horizontal"), Input.GetAxisRaw ("Vertical"));
+			if (hbDamageTaken)
+			{
+				UpdateHealthBar();
+			}
+			moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 			velocity = moveInput.normalized * speed * 50;
 
-			if (!gameObject.GetComponentInChildren<Gun>().isShooting && !animDamageTaken)
+			if (!gameObject.GetComponentInChildren<Gun>().isShooting && !gameObject.GetComponentInChildren<Gun>().isShooting2 && !animDamageTaken)
 			{
 				if (moveInput.x == 0 && moveInput.y == 0)
 				{
@@ -103,13 +115,9 @@ public class PlayerScript : MonoBehaviour
 					direction = 2;
 					anim.Play("runFront");
 				}
-
-				if (hbDamageTaken == true)
-				{
-					UpdateHealthBar();
-				}
 			}
 		}
+		else velocity = Vector2.zero;
 	}
 	
 	void FixedUpdate() 
@@ -121,6 +129,7 @@ public class PlayerScript : MonoBehaviour
 	public void DamageTaken() 
 	{	
 		health--;
+		manager.currentHealth = health;
 		if (health > 0f) {
             hbDamageTaken = true;
             animDamageTaken = true;
@@ -139,14 +148,14 @@ public class PlayerScript : MonoBehaviour
 	}
 	public void UpdateHealthBar()
 	{
-		if (healthBarDamagedImage.fillAmount > health / healthBarAnimate)
+		if (healthBarDamagedImage.fillAmount > health / maxHealth)
 		{
 			healthBarDamagedImage.fillAmount -= Time.deltaTime * 0.5f;
 		}
 		else
 		{
+			healthBarDamagedImage.fillAmount = health / maxHealth;
             hbDamageTaken = false;
-
         }
 		healthtext.text = health + "/" + maxHealth;
 	}
@@ -178,6 +187,13 @@ public class PlayerScript : MonoBehaviour
 		yield return new WaitForSeconds (0.25f);
 		portrait.sprite = portraitSprite;
 	}
+	private IEnumerator EnableCollision()
+	{
+		yield return new WaitForSeconds(spawnTime);
+		lockMovement = false;
+		GetComponent<Collider2D> ().enabled = true;
+		sprite.sortingOrder = 0;
+	}
 	private void DeathSequence()
 	{
 		lockMovement = true;
@@ -187,10 +203,12 @@ public class PlayerScript : MonoBehaviour
 
         anim.Play("death");
 
-		GameObject.Find ("Canvas/HUD_MAIN").SetActive(false);
+		GameObject.Find ("Canvas/Minimap").SetActive(false);
 		foreach (Transform child in transform)
 			if (!child.CompareTag("PlayerSprite"))
 				Destroy(child.gameObject);
+		foreach (GameObject playerObject in GameObject.FindGameObjectsWithTag("PlayerObject"))
+			GameObject.Destroy (playerObject);
 		gameoverScreen.SetActive(true);
 	}
 }

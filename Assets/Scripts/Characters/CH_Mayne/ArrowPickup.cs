@@ -4,7 +4,7 @@ using System.Collections;
 public class ArrowPickup : MonoBehaviour {
 	private Rigidbody2D rb;
 	private Gun crossbow;
-	private bool preventivePull;
+	[HideInInspector]public bool preventivePull;
 
 	// Use this for initialization
 	void Start () {
@@ -20,12 +20,13 @@ public class ArrowPickup : MonoBehaviour {
 		if (collider.CompareTag("Player") && crossbow.arrowCount < crossbow.maxArrowCount) 
 		{
 			crossbow.ChangeAmmoCount(1);
+			Physics2D.IgnoreLayerCollision(4,12, ignore: false);
+			Physics2D.IgnoreLayerCollision(8,12, ignore: false);
 			Destroy(gameObject);
-			Physics2D.IgnoreLayerCollision(4,5, ignore: false);
 		}
 		if (collider.CompareTag("Pit"))
 		    {
-			Physics2D.IgnoreLayerCollision(4,5);
+			Physics2D.IgnoreLayerCollision(4,12);
 			preventivePull = true;
 		}
 	}

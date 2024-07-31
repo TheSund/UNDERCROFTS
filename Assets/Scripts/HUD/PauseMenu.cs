@@ -11,6 +11,7 @@ public class PauseMenu : MonoBehaviour
 
 	void Start()
 	{
+		gameIsPaused = false;
 		levelChange = GameObject.Find("LevelChanger").GetComponent<LevelChanger>();
 	}
 
@@ -20,13 +21,9 @@ public class PauseMenu : MonoBehaviour
 		if (Input.GetKeyDown(KeyCode.Escape))
 		{
 			if (gameIsPaused)
-			{
 				Resume();
-			}
 			else
-			{
 				Pause();
-			}
 		}
 	}
 

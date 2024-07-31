@@ -18,7 +18,6 @@ public class CursorController : MonoBehaviour {
     Cursor.SetCursor(cursorBattle, new Vector2(startOffsetX, startOffsetY), CursorMode.Auto);
 	}
 
-	// Update is called once per frame
 	public static void ChangeCursor(Texture2D newCursor, float x, float y)
 	{
 		Cursor.SetCursor(newCursor, new Vector2(x, y), CursorMode.Auto);

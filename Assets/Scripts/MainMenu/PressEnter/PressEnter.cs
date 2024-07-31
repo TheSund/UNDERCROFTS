@@ -12,6 +12,7 @@ public class PressEnter : MonoBehaviour {
 	// Use this for initialization
 	void Start()
 	{
+		SaveSerial.LoadGameData();
 		Cursor.visible = false;
 		ready = false;
 		StartCoroutine(PressEnterBecomeReady());

@@ -30,7 +30,7 @@ public class LayoutSpawner : MonoBehaviour
 
 	public void Spawn () 
 	{	
-		if (!GetComponentInParent<AddRoom> ().isLastRoom && !GetComponentInParent<AddRoom>().isStartRoom) {
+		if (!GetComponentInParent<AddRoom> ().isLastRoom && !GetComponentInParent<AddRoom>().isItemRoom && !GetComponentInParent<AddRoom>().isStartRoom) {
 			//Если 1 путь - T
 			if (top.isSpawned && !right.isSpawned && !bottom.isSpawned && !left.isSpawned) {
 				rng = Random.Range (0, layouts.T.Length);
@@ -113,8 +113,11 @@ public class LayoutSpawner : MonoBehaviour
 				created = Instantiate (layouts.A [rng], transform.position, layouts.A [rng].transform.rotation);
 			}
             (created as GameObject).transform.SetParent(gameObject.transform.parent);
+			foreach (Transform child in (created as GameObject).transform) 
+				if (child.name == "minimap_room")
+					GetComponentInParent<AddRoom>().minimapSR = child.GetComponent<SpriteRenderer>();
         } 
-		else if (!GetComponentInParent<AddRoom>().isStartRoom)
+		else if (!GetComponentInParent<AddRoom>().isStartRoom && !GetComponentInParent<AddRoom>().isItemRoom)
 		{	
 			if (GetComponentInParent<AddRoom> ().isBossRoom)
 			{
@@ -127,6 +130,18 @@ public class LayoutSpawner : MonoBehaviour
 				created = Instantiate (layouts.AMBUSH[rng], transform.position, layouts.AMBUSH[rng].transform.rotation);
 			}
             (created as GameObject).transform.SetParent(gameObject.transform.parent);
+			foreach (Transform child in (created as GameObject).transform) 
+				if (child.name == "minimap_room")
+					GetComponentInParent<AddRoom>().minimapSR = child.GetComponent<SpriteRenderer>();
+        }
+		else if (!GetComponentInParent<AddRoom>().isStartRoom)
+		{
+            rng = Random.Range(0, layouts.ITEM.Length);
+            created = Instantiate(layouts.ITEM[rng], transform.position, layouts.ITEM[rng].transform.rotation);
+            (created as GameObject).transform.SetParent(gameObject.transform.parent);
+            foreach (Transform child in (created as GameObject).transform)
+                if (child.name == "minimap_room")
+                    GetComponentInParent<AddRoom>().minimapSR = child.GetComponent<SpriteRenderer>();
         }
 		Destroy(gameObject);
 	}

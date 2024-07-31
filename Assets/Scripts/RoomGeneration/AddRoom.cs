@@ -11,7 +11,6 @@ public class AddRoom : MonoBehaviour
 	[Header("Enemies")]
 	public GameObject[] enemyTypes;
 	public List<Transform> enemySpawners;
-
 	[HideInInspector] public List<GameObject> enemies;
 
 	private LayoutList variants;
@@ -21,31 +20,50 @@ public class AddRoom : MonoBehaviour
 	private bool cleared = false;
 	private bool ready = false;
 	private bool playerInRoom = false;
+	[Header("Room type")]
 	public bool isLastRoom = false;
 	public bool isBossRoom = false;
 	public bool isStartRoom;
-    // Для засады
+	public bool isItemRoom = false;
+// Для засады
+	[Header("Wave Counter")]
     public int waves = 3;
 	private GameObject wavecounter;
 
-	public GameObject fogOfWar;
+	[HideInInspector] public GameObject fogOfWar;
 	private Animator fogOfWarAnim;
+	public SpriteRenderer minimapSR;
+	public Sprite minimapCleared;
+// Соседи комнаты
+	[HideInInspector] public GameObject topNeighbor;
+	[HideInInspector] public GameObject rightNeighbor;
+	[HideInInspector] public GameObject bottomNeighbor;
+	[HideInInspector] public GameObject leftNeighbor;
+
 	private void Awake() 
 	{
 		variants = GameObject.FindGameObjectWithTag("Layouts").GetComponent<LayoutList>();
-		wavecounter = GameObject.Find("Canvas/HUD_MAIN/HUD_AMBUSH_COUNTER");
 		fogOfWarAnim = fogOfWar.GetComponent<Animator>();
 		Invoke("BecomeReady", 2f);
 	}
 	private void Start() 
 	{
 		variants.rooms.Add (gameObject);
-	}
+		wavecounter = GameObject.Find("Canvas").transform.FindChild("HUD_AMBUSH_COUNTER").gameObject;
+    }
 	private void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.CompareTag("Player"))
 			{
             fogOfWarAnim.SetTrigger("fadeout");
+			if (topNeighbor != null)
+				topNeighbor.GetComponent<AddRoom>().minimapSR.enabled = true;
+			if (rightNeighbor != null)
+				rightNeighbor.GetComponent<AddRoom>().minimapSR.enabled = true;
+			if (bottomNeighbor != null)
+				bottomNeighbor.GetComponent<AddRoom>().minimapSR.enabled = true;
+			if (leftNeighbor != null)
+				leftNeighbor.GetComponent<AddRoom>().minimapSR.enabled = true;
             // Если обычная комната
             if (!isLastRoom && !isStartRoom) {
 				if (ready && !spawned && enemySpawners.Count != 0)
@@ -57,8 +75,8 @@ public class AddRoom : MonoBehaviour
 					}
 
 					foreach (Transform spawner in enemySpawners) {
-						int rand = Random.Range(0, 11);
-						if (rand < 9) {
+						int rand = Random.Range(0, 15);
+						if (rand < 12) {
 							GameObject enemyType = enemyTypes[Random.Range(0, enemyTypes.Length)];
 							GameObject enemy = Instantiate(enemyType, spawner.position, Quaternion.identity) as GameObject;
 							enemy.transform.parent = transform;
@@ -66,6 +84,8 @@ public class AddRoom : MonoBehaviour
 						}
 					}
 				}
+				else
+					minimapSR.sprite = minimapCleared;
 				CheckEnemies();
 				//StartCoroutine(CheckEnemies());
 			}
@@ -125,6 +145,7 @@ public class AddRoom : MonoBehaviour
 				{
 					door.GetComponent<Door> ().Open ();
 				}
+				minimapSR.sprite = minimapCleared;
 			}
 		} 
 		else if (!isBossRoom) 

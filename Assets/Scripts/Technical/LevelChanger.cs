@@ -16,26 +16,36 @@ public class LevelChanger : MonoBehaviour
 		anim = GetComponentInChildren<Animator> ();
 		levelToLoad = 0;
 	}
-	
-	// Update is called once per frame
+
 	public void FadeToLevel(int l)
 	{
+		Cursor.visible = false;
 		anim.SetTrigger("fade");
 		levelToLoad = l;
 	}
 
 	public void OnFadeComplete ()
 	{
-		Application.LoadLevel(levelToLoad);
-		StartCoroutine(LoadingScreeenOnFade ());
+		StartCoroutine(LoadingScreenOnFade());
 	}
 
-	private IEnumerator LoadingScreeenOnFade() 
+	private IEnumerator LoadingScreenOnFade() 
 	{
+		yield return null;
 		AsyncOperation operation = Application.LoadLevelAsync(levelToLoad);
+		operation.allowSceneActivation = false;
 		loadingScreen.SetActive (true);
 		while (!operation.isDone)
+		{
+			if (operation.progress >= 0.9f)
+			{
+				operation.allowSceneActivation = true;
+				Cursor.visible = true;
+			}
+
+				
 			yield return null;
+		}
 	}
 
 }
