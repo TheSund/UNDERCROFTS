@@ -27,7 +27,7 @@ As of now, the bestiary consists only of not really impressive and actually quit
 And like in any good roguelike, dying means you have to start the exploration all over again! The game even MOCKS you!
 ## I'm sooo exited, how do I download the game?
 1. [Here](https://github.com/TheSund/UNDERCROFTS/releases "Yes, here!") choose and download preferred version of the game.
-2. Extract the archive with the game somewhere on your disk.
+2. Extract the archive with the game anywhere on your disk.
 3. ???
 4. Profit! Now you can play. **If you know russian language. I, like, had no time nor will to make a proper multilanguage syste-**
 
@@ -53,7 +53,7 @@ Hope you like the game even in this unfinished state! See ya in the <b>UNDERCROF
 1. ТЫ можешь пялиться на этот крутой экран "Нажмите ENTER"! Я столько времени потратил на эти крутые анимации!
 <img src="Assets/readme_materials/screen1.png"/>
 
-2. Перед забегом, тебе нужно выбрать одного [УДАЛЕНО]и играбельных персонажей, каждый из которых имеет свой уникальный стиль игры!<br>
+2. Перед забегом, тебе нужно выбрать одного из [УДАЛЕНО]и играбельных персонажей, каждый из которых имеет свой уникальный стиль игры!<br>
 Правда, пока что у нас готов всего лишь ОДИН персонаж... но ты подожди!
 <img src="Assets/readme_materials/screen2.png"/>
 
