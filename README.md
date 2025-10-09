@@ -29,7 +29,7 @@ And like in any good roguelike, dying means you have to start the exploration al
 1. [Here](https://github.com/TheSund/UNDERCROFTS/releases "Yes, here!") choose and download preferred version of the game.
 2. Extract the archive with the game somewhere on your disk.
 3. ???
-4. Profit! Now you can play. **If you know russian language. I, like, had no time nor will do make a proper multilanguage syste-**
+4. Profit! Now you can play. **If you know russian language. I, like, had no time nor will to make a proper multilanguage syste-**
 
 ## What are the controls of the game?
 <ul>
