@@ -40,7 +40,7 @@ And like in any good roguelike, dying means you have to start the exploration al
 </ul>
 
 <br>
-Hope you like the game even in this unfinished state! See ya in the **UNDERCROFTS!**
+Hope you like the game even in this unfinished state! See ya in the <b>UNDERCROFTS!</b>
 
 # [RU] ПОДЗЕМЕЛЬЯ
 ПОДЗЕМЕЛЬЯ - игра в жанре "roguelike", изначально созданная как проект для дипломной работы.
@@ -82,4 +82,4 @@ Hope you like the game even in this unfinished state! See ya in the **UNDERCROFT
 </ul>
 
 <br>
-Надеюсь, тебе понравится игра даже в таком незаконченном состоянии! Увидимся в **ПОДЗЕМЕЛЬЯХ!**
+Надеюсь, тебе понравится игра даже в таком незаконченном состоянии! Увидимся в <b>ПОДЗЕМЕЛЬЯХ!</b>
