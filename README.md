@@ -28,8 +28,7 @@ And like in any good roguelike, dying means you have to start the exploration al
 ## I'm sooo exited, how do I download the game?
 1. [Here](https://github.com/TheSund/UNDERCROFTS/releases "Yes, here!") choose and download preferred version of the game.
 2. Extract the archive with the game anywhere on your disk.
-3. ???
-4. Profit! Now you can play. **If you know russian language. I, like, had no time nor will to make a proper multilanguage syste-**
+3. Done! Now you can play. **If you know russian language. I, like, had no time nor will to make a proper multilanguage syste-**
 
 ## What are the controls of the game?
 <ul>
@@ -50,7 +49,7 @@ Hope you like the game even in this unfinished state! See ya in the <b>UNDERCROF
 Что ж, давай взглянем:
 <img src="Assets/readme_materials/screen0.png"/>
 
-1. ТЫ можешь пялиться на этот крутой экран "Нажмите ENTER"! Я столько времени потратил на эти крутые анимации!
+1. Ты можешь пялиться на этот крутой экран "Нажмите ENTER"! Я столько времени потратил на эти крутые анимации!
 <img src="Assets/readme_materials/screen1.png"/>
 
 2. Перед забегом, тебе нужно выбрать одного из [УДАЛЕНО]и играбельных персонажей, каждый из которых имеет свой уникальный стиль игры!<br>
@@ -70,8 +69,7 @@ Hope you like the game even in this unfinished state! See ya in the <b>UNDERCROF
 ## Я таааак впечатлен, как мне скачать игру?
 1. [Здесь](https://github.com/TheSund/UNDERCROFTS/releases "Да-да, сюда!") выбери и скачай последнюю версию игры.
 2. Распакуй скачанный архив с игрой в желаемое место на диске.
-3. ???
-4. Готово! Можешь играть.
+3. Готово! Можешь играть.
 
 ## А какое управление в игре?
 <ul>
