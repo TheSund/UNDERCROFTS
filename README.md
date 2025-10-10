@@ -23,7 +23,7 @@ The thing is - each time you start a new run, the layout is completely different
 As of now, the bestiary consists only of not really impressive and actually quite dumb GREEN SLIMES... but you just wait!
 <img src="Assets/readme_materials/screen4.png"/>
 
-4. But if you have enough skill issue, you can even DIE to them!<br>
+5. But if you have enough skill issue, you can even DIE to them!<br>
 And like in any good roguelike, dying means you have to start the exploration all over again! The game even MOCKS you!
 ## I'm sooo exited, how do I download the game?
 1. [Here](https://github.com/TheSund/UNDERCROFTS/releases "Yes, here!") choose and download preferred version of the game.
@@ -44,7 +44,7 @@ Hope you like the game even in this unfinished state! See ya in the <b>UNDERCROF
 # [RU] ПОДЗЕМЕЛЬЯ
 ПОДЗЕМЕЛЬЯ - игра в жанре "roguelike", изначально созданная как проект для дипломной работы.
 ## О чем игра?
-Играли когда-нибудь в The Binding of Isaac? Может быть, в Enter The Gungeon? Если да, то тебе и так будет понятно, о чем игра.
+Играл когда-нибудь в The Binding of Isaac? Может быть, в Enter The Gungeon? Если да, то тебе и так будет понятно, о чем игра.
 ## Но, типа, что КОНКРЕТНО в игре нужно делать?
 Что ж, давай взглянем:
 <img src="Assets/readme_materials/screen0.png"/>
@@ -64,7 +64,7 @@ Hope you like the game even in this unfinished state! See ya in the <b>UNDERCROF
 Пока что, весь бестиарий включает в себя только не очень-то впечатляющих и очень даже глупых ЗЕЛЕНЫХ СЛАЙМОВ... но ты только подожди!
 <img src="Assets/readme_materials/screen4.png"/>
 
-4. Но если у тебя достаточно проблем со скиллом, то ты можешь ПОМЕРЕТЬ от них!<br>
+5. Но если у тебя достаточно проблем со скиллом, то ты можешь да ПОМЕРЕТЬ от них!<br>
 И как в любом хорошем рогалике, смерть означает, что исследование нужно начинать с самого начала! Игра даже насмехается над тобой!
 ## Я таааак впечатлен, как мне скачать игру?
 1. [Здесь](https://github.com/TheSund/UNDERCROFTS/releases "Да-да, сюда!") выбери и скачай последнюю версию игры.
